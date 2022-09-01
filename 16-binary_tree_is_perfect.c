@@ -52,6 +52,9 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int len, l_depth, r_depth;
 
+	if (!tree)
+		return (0);
+
 	len = depth(tree);
 	l_depth = binary_tree_height(tree->left);
 	r_depth = binary_tree_height(tree->right);
